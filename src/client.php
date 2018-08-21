@@ -149,7 +149,8 @@
             $ch = curl_init($url);
 
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+            curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);            
+            curl_setopt($ch, CURLOPT_POSTREDIR, CURL_REDIR_POST_ALL);
             curl_setopt($ch, CURLOPT_TCP_NODELAY, true);
 
             curl_setopt(
